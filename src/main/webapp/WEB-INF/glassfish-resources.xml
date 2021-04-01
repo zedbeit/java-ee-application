@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-resource jndi-name="jdbc/newDS" object-type="user" pool-name="newPool" enabled="true" />
+    <jdbc-connection-pool datasource-classname="com.mysql.cj.jdbc.MysqlDataSource" name="newPool">
+        <property name="URL" value="jdbc:mysql://localhost:3306/myschema?zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+        <property name="User" value="root"/>
+        <property name="Password" value="beita"/>
+    </jdbc-connection-pool>
+</resources>
